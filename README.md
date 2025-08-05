@@ -7,10 +7,10 @@ The GPSR method is originally presented in https://github.com/roussel-ryan/gpsr.
 
 ## Installation
 ```shell
-git clone https://github.com/roussel-ryan/gpsr.git
+https://github.com/seongyeolk/6d_gpsr_cavity_paper
 cd 6d_gpsr_cavity_paper
 conda env create -f environment.yml
-conda activate ps-reconstruction
+conda activate gpsr_paper_demo
 pip install -e .
 ```
 

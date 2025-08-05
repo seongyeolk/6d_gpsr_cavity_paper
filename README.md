@@ -14,7 +14,7 @@ conda activate gpsr_paper_demo
 pip install -e .
 ```
 
-In addition, we need to install Bmad-X simulation code (https://github.com/bmad-sim/Bmad-X).
+In addition, we need to install Bmad-X simulation code (https://github.com/bmad-sim/Bmad-X) while the conda environment is activated.
 Please go to the repository and follow the instruction. 
 
 ## Examples

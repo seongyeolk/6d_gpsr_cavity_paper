@@ -14,6 +14,8 @@ conda activate gpsr_paper_demo
 pip install -e .
 ```
 
+In case of Pytorch installation, libraries related to cuda calculation should be properly installed according to the GPU installed in your system. Please go to https://pytorch.org/ and check the version of libraries. 
+
 In addition, we need to install Bmad-X simulation code (https://github.com/bmad-sim/Bmad-X) while the conda environment is activated.
 Please go to the repository and follow the instruction. 
 

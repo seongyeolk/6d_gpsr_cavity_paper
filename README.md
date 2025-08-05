@@ -3,7 +3,7 @@
 
 This repository includes data and code files for both simulation and experimental demonstrations of 6-dimensional phase space reconstruction using accelerating cavity and dipole magnet, related to the paper "Deployment and validation of predictive 6-dimensional beam diagnostics through generative reconstruction with standard accelerator elements."
 
-The original GPSR method is presented in https://github.com/roussel-ryan/gpsr.
+The original GPSR method is presented in https://github.com/roussel-ryan/gpsr, while the present code is based on "https://github.com/roussel-ryan/gpsr_6d_paper"
 
 ## Installation
 ```shell

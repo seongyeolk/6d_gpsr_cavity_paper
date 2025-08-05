@@ -200,23 +200,6 @@ def palxfel_Simulation(
 ):
     
     """
-    Creates diagnostic lattice with focusing triplet and diagnostics (quad+tdc+bend). 
-    Default values are for AWA Zone 5.
-    
-    Params
-    ------
-        p0c: float
-            design momentum (eV/c). 
-            
-        l_qt: float
-            quad length for tweak quad and sextupole (m). Default: 0.10.
-
-        l_qb: float
-            quad length for BC3H quad (m). Default: 0.18.
-            
-        l_bend: float
-            Bend length (m). Default: 0.70 m
-            
     Returns
     -------
         TorchLattice
@@ -329,24 +312,7 @@ def palxfel_Experiment(
     dipole_on=True
 ):
     
-    """
-    Creates diagnostic lattice with focusing triplet and diagnostics (quad+tdc+bend). 
-    Default values are for AWA Zone 5.
-    
-    Params
-    ------
-        p0c: float
-            design momentum (eV/c). 
-            
-        l_qt: float
-            quad length for tweak quad and sextupole (m). Default: 0.10.
-
-        l_qb: float
-            quad length for BC3H quad (m). Default: 0.18.
-            
-        l_bend: float
-            Bend length (m). Default: 0.70 m
-            
+    """            
     Returns
     -------
         TorchLattice

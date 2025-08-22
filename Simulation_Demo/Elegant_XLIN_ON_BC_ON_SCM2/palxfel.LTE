@@ -1,0 +1,144 @@
+Charge : CHARGE, TOTAL = 250.00E-12  
+
+!Quad_BC1 for XLIN = ON
+L1_Q3  : QUAD, L=0.065, K1 =  0.0000000000000000, DX=0.000000, DY=0.000000, DZ=0.000000, TILT=0.000000
+BC1_Q1 : QUAD, L=0.065, K1 =  0.0000000000000000, DX=0.000000, DY=0.000000, DZ=0.000000, TILT=0.000000
+BC1_Q2 : QUAD, L=0.065, K1 =  0.0000000000000000, DX=0.000000, DY=0.000000, DZ=0.000000, TILT=0.000000
+BC1_Q3 : QUAD, L=0.065, K1 =  0.0000000000000000, DX=0.000000, DY=0.000000, DZ=0.000000, TILT=0.000000
+BC1_Q4 : QUAD, L=0.065, K1 = -1.0179457635384614, DX=0.000000, DY=0.000000, DZ=0.000000, TILT=0.000000
+BC1_Q5 : QUAD, L=0.065, K1 = -2.7879396153846154, DX=0.000000, DY=0.000000, DZ=0.000000, TILT=0.000000
+BC1_Q6 : QUAD, L=0.065, K1 =  6.2317656369230760, DX=0.000000, DY=0.000000, DZ=0.000000, TILT=0.000000
+
+
+XLIN         : RFCW, FREQ= 1.142400000E+10,L= 6.000000000E-01, &     
+                     VOLT=" 1.35E6 1.00 /",   &  
+                     PHASE="-127.92 90 +", & 
+                     CHANGE_P0=1,END1_FOCUS=1,END2_FOCUS=1,CELL_LENGTH=8.75E-3, &    
+                     ZWAKEFILE="Sz_5um_10mm_xband.sdds", &   
+                     TRWAKEFILE="Sx_5um_10mm_xband.sdds", &  
+                     TCOLUMN="t",WXCOLUMN="W",WYCOLUMN="W",WZCOLUMN="W", &   
+                     DX=0.000000, DY=0.000000, &    
+                     INTERPOLATE=1,N_KICKS=20, SMOOTHING=1    
+
+TCAV         : RFDF, FREQUENCY= 2.856E9, L= 1.061, &     
+                     VOLTAGE=" -1.70e6 1.00 /",   &  
+                     PHASE="0.0 + 90", &
+					 TILT=1.5707963267948966
+
+TCAV2: DRIF, L = 1.061
+XLIN2: DRIF, L = 6.000000000E-01
+
+BC1_B1A2: DRIF, L = 0.1
+BC1_B1B2: DRIF, L = 0.1
+BC1_B2A2: DRIF, L = 0.1
+BC1_B2B2: DRIF, L = 0.1
+BC1_B3A2: DRIF, L = 0.1
+BC1_B3B2: DRIF, L = 0.1
+BC1_B4A2: DRIF, L = 0.1
+BC1_B4B2: DRIF, L = 0.1
+
+!BC1  
+BC1_B1A  : CSRCSBEND, L=0.200000, &     
+           ANGLE=-0.086743, &    
+           EDGE1_EFFECTS=1, E1= 0, &   
+           EDGE2_EFFECTS=1, E2=-0.086743, &  
+           HGAP=1.500000E-02, &
+		   K1=0.000000, &    
+           K2=-0.360079, &    
+           K3=0.000000, &    
+           K4=79366.507700, &    
+           K5=0.000000, &    
+           K6=7045662341.625164, &    
+           N_SLICES=20, INTEGRATION_ORDER=4, BINS=60, &     
+           ETILT=0.000000,  DX=0.000000, DY=0.000000, DZ=0.000000, &    
+           SG_HALFWIDTH=1, SG_ORDER=1, STEADY_STATE=0, ISR=1   
+
+BC1_B2A  : CSRCSBEND,L=0.200000, &  
+           ANGLE= 0.086743 , &   
+           EDGE1_EFFECTS=1, E1= 0.086743 , &     
+           EDGE2_EFFECTS=1, E2= 0.0, &  
+           HGAP=1.500000E-02, &
+		   K1=0.000000, &    
+           K2=-0.360079, &    
+           K3=0.000000, &    
+           K4=79366.507700, &    
+           K5=0.000000, &    
+           K6=7045662341.625164, &    
+           N_SLICES=20, INTEGRATION_ORDER=4, BINS=60, &     
+           ETILT=0.000000,  DX=0.000000, DY=0.000000, DZ=0.000000, &    
+           SG_HALFWIDTH=1, SG_ORDER=1, STEADY_STATE=0, ISR=1   
+
+
+BC1_B3A  : CSRCSBEND,L=0.200000, &  
+           ANGLE= 0.086743 , &   
+           EDGE1_EFFECTS=1,E1=0, &     
+           EDGE2_EFFECTS=1,E2=0.086743, &  
+           HGAP=1.500000E-02 , &
+		   K1=0.000000, &    
+           K2=-0.360079, &    
+           K3=0.000000, &    
+           K4=79366.507700, &    
+           K5=0.000000, &    
+           K6=7045662341.625164, &    
+           N_SLICES=20, INTEGRATION_ORDER=4, BINS=60, &     
+           ETILT=0.000000,  DX=0.000000, DY=0.000000, DZ=0.000000, &    
+           SG_HALFWIDTH=1, SG_ORDER=1, STEADY_STATE=0, ISR=1    
+
+
+BC1_B4A  : CSRCSBEND,L=0.200000, &  
+           ANGLE=-0.086743 , &   
+           EDGE1_EFFECTS=1, E1=-0.086743, &  
+           EDGE2_EFFECTS=1, E2= 0.0, &  
+           HGAP=1.500000E-02  , &
+		   K1=0.000000, &    
+           K2=-0.360079, &    
+           K3=0.000000, &    
+           K4=79366.507700, &    
+           K5=0.000000, &    
+           K6=7045662341.625164, &    
+           N_SLICES=20, INTEGRATION_ORDER=4, BINS=60, &     
+           ETILT=0.000000,  DX=0.000000, DY=0.000000, DZ=0.000000, &    
+           SG_HALFWIDTH=1, SG_ORDER=1, STEADY_STATE=0, ISR=1   
+
+
+BAS1     : CSRCSBEND,L=0.700000, &  
+           ANGLE= -0.2617993877991494 , &   
+           EDGE1_EFFECTS=1, E1 = -0.1308996938995747, &  
+           EDGE2_EFFECTS=1, E2= -0.1308996938995747,  &    
+           HGAP=1.500000E-02 , &
+		   N_SLICES=20, INTEGRATION_ORDER=4, BINS=60, &     
+           ETILT=0.000000,  DX=0.000000, DY=0.000000, DZ=0.000000, &    
+           SG_HALFWIDTH=1, SG_ORDER=1, STEADY_STATE=0, ISR=1   
+
+
+PACCS    : WATCH,FILENAME="ACCS.out" 
+SCM1W : WATCH,FILENAME="SCM1.out" 
+SCM2W : WATCH,FILENAME="SCM2.out" 
+
+D1  		 : DRIF, L= 3.82431
+D2  		 : DRIF, L= 0.22145
+D3  		 : DRIF, L= 1.09650
+D4  		 : DRIF, L= 0.91000
+D5  		 : DRIF, L= 0.31750
+D6  		 : DRIF, L= 1.00446
+D61  		 : DRIF, L= 0.10000
+D62  		 : DRIF, L= 3.19696
+D7  		 : DRIF, L= 0.67800
+D8  		 : DRIF, L= 0.32200
+D9  		 : DRIF, L= 4.30142
+D10  		 : DRIF, L= 1.57900
+D11  		 : DRIF, L= 0.44150
+D12  		 : DRIF, L= 0.45450
+D13  		 : DRIF, L= 1.60250
+D132  		 : DRIF, L= 0.35450
+D14  		 : DRIF, L= 0.15750
+D15  		 : DRIF, L= 1.75750
+
+! =====================================================================================
+
+HL1_2:LINE = (PACCS, L1_Q3, D1, BC1_Q1, D2, XLIN, D3, BC1_Q2, D4, BC1_Q3, D5, 					&
+              BC1_B1A, D6, D61, D62, BC1_B2A, D7, SCM1W, D8, BC1_B3A, D9, BC1_B4A,  			&
+              D10, BC1_Q4, D11, TCAV, D12, BC1_Q5, D13, D132, BC1_Q6, D4, BAS1, D15, SCM2W)
+
+HU2E_L          : LINE = (Charge, HL1_2)
+RETURN

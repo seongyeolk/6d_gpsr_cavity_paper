@@ -1,0 +1,64 @@
+&run_setup 
+        lattice                  = palxfel.LTE,    
+        use_beamline             = HU2E_L,    
+        output                   = %s.out,    
+        centroid                 = %s.cen,    
+        sigma                    = %s.sig,    
+        final                    = %s.fin,    
+        parameters               = %s.par,    
+        magnets                  = %s.mag,    
+        semaphore_file           = %s.done,    
+        combine_bunch_statistics = 0,    
+        default_order            = 3,    
+        concat_order             = 0,    
+        print_statistics         = 0,    
+        random_number_seed       = 987654321,    
+        p_central                = 69.85115529
+        tracking_updates         = 1    
+&end 
+
+
+&run_control 
+        n_steps                  = 1,    
+        reset_rf_for_each_step   = 0    
+&end 
+
+&matrix_output
+  printout                 = %s.mpr,
+  printout_order           = 1,
+  SDDS_output = "%s.sdds",
+  SDDS_output_order = 2,
+  full_matrix_only = 0,
+  output_at_each_step = 1,
+&end
+
+&correct 
+        mode                     = "trajectory", 
+        method                   = "one-to-one", 
+        trajectory_output        = %s.traj, 
+        corrector_output         = %s.cor, 
+        corrector_limit[0]       = 5.000000e-03, 
+        corrector_limit[1]       = 5.000000e-03, 
+        statistics               = %s.scor, 
+        n_xy_cycles              = 2, 
+        n_iterations             = 2, 
+        track_before_and_after   = 0, 
+        use_actual_beam          = 0, 
+        disable                  = 1 
+&end 
+
+&sdds_beam 
+        input                    = injectorbeam.sdds,    
+        input_type               = "elegant",    
+        n_particles_per_ring     = 1,    
+        reuse_bunch              = 1,    
+        one_random_bunch         = 0,    
+!       sample_interval          = 100    
+&end 
+
+&twiss_output 
+        filename                 = %s.twi,    
+        matched                  = 1  
+&end 
+
+&track &end 
